@@ -25,7 +25,7 @@ async def on_message(message):
 @bot.command()
 # If a "purge-immune" role is configured in the server the command is called, kicks all
 # members in the server WITHOUT the role.
-async def purge(ctx):
+async def executeorder66(ctx):
     # Find purge immune role
     purge_immune = None
     for role in ctx.guild.roles:
@@ -48,7 +48,7 @@ async def purge(ctx):
     if len(kicked_members) == 0:
         await ctx.channel.send("No members purged.")
     else:
-        await ctx.channel.send(f"Purged: ")
+        await ctx.channel.send(f"Executing Order 66. Purged: ")
         for member in kicked_members:
             await member.kick(reason="Purged. See you next time!")
             await ctx.channel.send(f"{member}")
